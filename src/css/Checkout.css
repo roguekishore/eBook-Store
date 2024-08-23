@@ -1,0 +1,92 @@
+.checkout {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.checkout h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.checkout-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.book-image {
+  max-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-info {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.book-info h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.book-info p {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+.customer-form {
+  margin-top: 20px;
+}
+
+.customer-form h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.customer-form form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.customer-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.customer-form input,
+.customer-form select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.customer-form button {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.customer-form button:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
+
+.customer-form button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+}

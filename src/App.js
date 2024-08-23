@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import ScrollingText from './components/ScrollingText';
+import NewBook from './components/NewBook';
+import Catalog from './components/Catalog';
+import Testimonials from './components/Testimonials';
+import Collections from './pages/Collections';
+import Checkout from './pages/Checkout';
+import ThreeDBook from './components/ThreeDBook';
+import Footer from './components/Footer';
+import ImageGallery from './components/ImageGallery';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <ScrollingText />
+      <ThreeDBook />
+      <NewBook />
+      <Catalog />
+      <Testimonials />
+      <Router>
+      <Routes>
+        <Route path="/" element={<Collections />} />
+        <Route path="/checkout" element={<Checkout />} />
+      </Routes>
+    </Router>
+    <Footer />
     </div>
   );
 }
