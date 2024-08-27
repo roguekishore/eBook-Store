@@ -9,13 +9,16 @@ import Collections from './pages/Collections';
 import Checkout from './pages/Checkout';
 import ThreeDBook from './components/ThreeDBook';
 import Footer from './components/Footer';
+import ImageRotator from './components/ImageRotator';
 import ImageGallery from './components/ImageGallery';
+import bg from './images/lib.jpeg';
 
 function App() {
   return (
     <div className="App">
       <NavBar />
       <ScrollingText />
+      <ImageRotator />
       <ThreeDBook />
       <NewBook />
       <Catalog />

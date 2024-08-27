@@ -8,8 +8,13 @@ body {
 
 body {
     color: black;
-    background-color: white;
+    /* background-color: white; */
+    /* background-image: url(./images/lib.jpeg); */
     font-weight: 600;
     overflow-x: hidden;
 }
 
+img {
+    max-width: 100%;
+    
+}
