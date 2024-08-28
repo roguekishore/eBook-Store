@@ -1,5 +1,5 @@
 import React from 'react';
-import bat from '../images/prof.jpg' ;
+import bat from '../images/batman.jpg' ;
 import '../css/Testimonials.css';
 
 const testimonials = [
