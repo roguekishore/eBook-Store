@@ -1,13 +1,15 @@
 .testimonial-section {
-    background: linear-gradient(90deg, #6200ea, #3d5afe);
+    background: linear-gradient(90deg, #fff, #fff);
     padding: 50px 0px;
     text-align: center;
-    color: white;
+    color: #ffffff;
 }
 
 .testimonial-section h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
+    font-family: 'monument';
+    color: black;
 }
 
 .testimonial-container {
@@ -19,15 +21,20 @@
 
 
 .testimonial-card {
-    background: rgba(255, 255, 255, 0.07);
+    background: rgb(255, 0, 0);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
     backdrop-filter: blur(3.2px);
     -webkit-backdrop-filter: blur(3.2px);
     padding: 20px;
     max-width: 400px;
     position: relative;
     text-align: left;
+    transition: box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); 
 }
 
 .testimonial-image {
@@ -47,16 +54,3 @@
     margin: 5px 0;
 }
 
-.testimonial-role {
-    font-size: 0.9rem;
-    color: #d1c4e9;
-}
-
-.quote-icon {
-    font-size: 3rem;
-    color: #d1c4e9;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    opacity: 0.6;
-}

@@ -1,56 +1,48 @@
+// Footer.js
 import React from 'react';
-import '../css/Footer.css';
+import { FaEnvelope, FaLinkedin, FaInstagram, FaTwitter, FaDiscord } from 'react-icons/fa';
+import '../css/Footer.css'; // Make sure to create and import this CSS file
 
 const Footer = () => {
-  return (
-    <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-section">
-          <h2 className="footer-logo">Style</h2>
-          <p>
-            Subscribe Easy Tutorials Youtube channel to watch more videos on website development and press the bell icon to get immediate notification of latest videos.
-          </p>
-        </div>
-        <div className="footer-section">
-          <h3>Office</h3>
-          <p>
-            ITPL Road <br />
-            Whitefield, Bangalore <br />
-            Karnataka, PIN 560066, <br />
-            India
-          </p>
-          <p>avinashdm@outlook.com</p>
-          <p>+91 - 0123456789</p>
-        </div>
-        <div className="footer-section">
-          <h3>Links</h3>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#contacts">Contacts</a></li>
-          </ul>
-        </div>
-        <div className="footer-section">
-          <h3>Newsletter</h3>
-          <form>
-            <input type="email" placeholder="Enter your email id" />
-            <button type="submit">→</button>
-          </form>
-          <div className="social-icons">
-            <a href="#facebook"><i className="fab fa-facebook-f"></i></a>
-            <a href="#twitter"><i className="fab fa-twitter"></i></a>
-            <a href="#whatsapp"><i className="fab fa-whatsapp"></i></a>
-            <a href="#pinterest"><i className="fab fa-pinterest"></i></a>
-          </div>
-        </div>
-      </div>
-      <div className="footer-bottom">
-        <p>Easy Tutorials © 2021 - All Rights Reserved</p>
-      </div>
-    </footer>
-  );
-};
+    return (
+        <footer className="footer">
+            <div className="footer-container">
+                <div className="footer-top">
+                    <h2>Get in touch.</h2>
+                    <div className="footer-icons">
+                        <a href="mailto:info@example.com" className="footer-icon">
+                            <FaEnvelope />
+                        </a>
+                        <a href="https://linkedin.com" className="footer-icon" target="_blank" rel="noopener noreferrer">
+                            <FaLinkedin />
+                        </a>
+                        <a href="https://instagram.com" className="footer-icon" target="_blank" rel="noopener noreferrer">
+                            <FaInstagram />
+                        </a>
+                        <a href="https://twitter.com" className="footer-icon" target="_blank" rel="noopener noreferrer">
+                            <FaTwitter />
+                        </a>
+                        <a href="https://discord.com" className="footer-icon" target="_blank" rel="noopener noreferrer">
+                            <FaDiscord />
+                        </a>
+                    </div>
+                </div>
+                <div className="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/shop">Shop</a>
+                    <a href="/about">About Us</a>
+                    <a href="/contact">Contact</a>
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Service</a>
+                </div>
+                <div className="footer-bottom">
+                    <p>Designed and engineered by Kishore.</p>
+                    <p>Built with React, HTML, CSS, and JavaScript.</p>
+                    <p>© 2024 Kishore. Last updated August '24.</p>
+                </div>
+            </div>
+        </footer>
+    );
+}
 
 export default Footer;

@@ -1,20 +1,36 @@
-html,
-body {
+@font-face {
+    font-family: 'monument';
+    src: url('./monument/MonumentExtended-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ibm';
+    src: url('./IBMPlexMono-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    overflow: -moz-scrollbars-none;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+body {
+    color: black;
+    font-weight: 500;
+    overflow-x: hidden;
+    font-family: 'ibm', sans-serif;
+    overflow-y: scroll; 
     margin: 0;
     padding: 0;
 }
 
-
-body {
-    color: black;
-    /* background-color: white; */
-    /* background-image: url(./images/lib.jpeg); */
-    font-weight: 600;
-    overflow-x: hidden;
-}
-
-img {
-    max-width: 100%;
-    
+body::-webkit-scrollbar {
+    display: none;
 }

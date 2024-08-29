@@ -26,15 +26,15 @@ const testimonials = [
 const Testimonial = () => {
   return (
     <div className="testimonial-section">
-      <h2>Our Happy Client’s Review</h2>
+      <h2>Our Happy Customers’ Review</h2>
       <div className="testimonial-container">
         {testimonials.map((testimonial, index) => (
           <div className="testimonial-card" key={index}>
             <img src={bat} alt={testimonial.name} className="testimonial-image" />
             <p>{testimonial.text}</p>
             <h3>{testimonial.name}</h3>
-            <p className="testimonial-role">{testimonial.role}</p>
-            <div className="quote-icon">“</div>
+            
+            
           </div>
         ))}
       </div>

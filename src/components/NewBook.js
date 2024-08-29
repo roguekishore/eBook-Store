@@ -8,7 +8,7 @@ const NewBook = () => {
       <section className="new-book-release">
         <div className="new-book-info">
           <h2>New Release</h2>
-          <h1>This Dark Road to Mercy</h1>
+          <h1>The Monk Who Sold His Ferrari</h1>
           <p>
             "The Monk Who Sold His Ferrari" is a self-help book by Robin Sharma that tells the story of Julian Mantle, a high-powered lawyer who embarks on a journey of self-discovery after a health crisis. The book uses a fictional narrative to impart life lessons, focusing on themes like the importance of balance, mindfulness, and personal fulfillment. Through his spiritual awakening, Julian learns valuable principles from a group of monks in the Himalayas, which he then shares, offering readers practical insights on how to lead a more meaningful and purpose-driven life.
           </p>

@@ -1,15 +1,12 @@
 .new-book {
-    background-image: url(../images/bg1.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background:  linear-gradient(rgb(20, 20, 20), rgb(0, 0, 0));
 }
 
 .new-book-release {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(220, 220, 220, 0.9);
+    
     padding: 85px;
 }
 
@@ -18,19 +15,23 @@
 }
 
 .new-book-info h2 {
-    color: #c69589;
+    color: #ff2600;
     font-size: 18px;
+    font-family: 'monument';
+    letter-spacing: 1px;
+    font-weight: 200;
 }
 
 .new-book-info h1 {
     font-size: 48px;
-    color: #333;
+    color: #fff;
     margin: 10px 0;
+    font-family: 'monument';
 }
 
 .new-book-info p {
     font-size: 16px;
-    color: #666;
+    color: #fff;
     line-height: 1.6;
     margin-bottom: 30px;
 }
@@ -50,30 +51,29 @@
 }
 
 .purchase-btn {
-    background-color: #8a6340;
+    background-color: #ff2600;
     color: #fff;
 }
 
 .kindle-btn {
-    background-color: #f0dfd8;
-    color: #8a6340;
+    background-color: #fff;
+    color: #ff2600;
 }
 
 .purchase-btn:hover {
-    background-color: #a76c4e;
+    background-color: #bb1c00;
     color: #fff;
 }
 
 .kindle-btn:hover {
-    background-color: #dfc5b6;
-    color: #704f39;
+    background-color: #c5c5c5;
+    color: #ff2600;
 }
-
 .new-book-image {
-    max-width: 500px;
+    max-width: 400px;
     overflow: hidden;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
 }
 
 .new-book-image .image-container {
@@ -84,9 +84,13 @@
 
 .new-book-image img {
     width: 100%;
-    transition: transform 0.3s ease;
+    transition: opacity 0.3s ease; 
 }
 
-.new-book-image img:hover {
-    transform: scale(1.05);
+/* .new-book-image img:hover {
+    opacity: 0.8; 
+} */
+
+.new-book-image:hover {
+    box-shadow: 0 0 40px 5px rgba(255, 255, 255, 0.3);
 }

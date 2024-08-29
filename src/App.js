@@ -10,27 +10,40 @@ import Checkout from './pages/Checkout';
 import ThreeDBook from './components/ThreeDBook';
 import Footer from './components/Footer';
 import ImageRotator from './components/ImageRotator';
-import ImageGallery from './components/ImageGallery';
+import Login from './pages/Login';
+import Cart from './pages/Cart';
+import MainLayout from './components/MainLayout';
+import FloatingNavbar from './components/FloatingNavbar';
 import bg from './images/lib.jpeg';
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <ScrollingText />
-      <ImageRotator />
-      <ThreeDBook />
-      <NewBook />
-      <Catalog />
-      <Testimonials />
-      <Router>
-      <Routes>
-        <Route path="/" element={<Collections />} />
-        <Route path="/checkout" element={<Checkout />} />
-      </Routes>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={
+            <MainLayout>
+              
+              <ImageRotator />
+              <ThreeDBook />
+              <NewBook />
+              <Testimonials />
+            </MainLayout>
+          } />
+          <Route path="/books" element={
+            <MainLayout>
+              <Collections />
+            </MainLayout>
+          } />
+          <Route path="/cart" element={
+            <MainLayout>
+              <Cart />
+            </MainLayout>
+          } />
+        </Routes>
+      </div>
     </Router>
-    <Footer />
-    </div>
   );
 }
 

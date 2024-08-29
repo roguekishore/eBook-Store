@@ -1,27 +1,33 @@
-import React from 'react';
-import { FaUser, FaShoppingBag } from 'react-icons/fa'; 
+import React, { useEffect, useState } from 'react';
 import '../css/NavBar.css';
 
 const NavBar = () => {
-  return (
-    <header>
-      <nav>
-        <div className="logo">
-          <h1>READIFY</h1>
-        </div>
-        <ul className="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Books</a></li>
-          <li><a href="#">Reader</a></li>
-          <li><a href="#">Cart</a></li>
-        </ul>
-        <div className="nav-icons">
-          <a href="#"><FaUser /></a>
-          <a href="#"><FaShoppingBag /></a>
-        </div>
-      </nav>
-    </header>
-  );
+    const [time, setTime] = useState('');
+
+    useEffect(() => {
+        const updateTime = () => {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            setTime(timeString);
+        };
+        const timer = setInterval(updateTime, 1000);
+        updateTime();
+
+        return () => clearInterval(timer); // Cleanup interval on component unmount
+    }, []);
+
+    return (
+        <nav className="nav">
+            <div className="logo">
+                <a href="#">Readify</a>
+            </div>
+            <div className="nav-links">
+                <a href="#">STUDIO</a>
+                <a href="#">ABOUT ME</a>
+                <a href="#">{time}</a>
+            </div>
+        </nav>
+    );
 };
 
 export default NavBar;
