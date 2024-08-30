@@ -1,39 +1,25 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useCart } from '../CartContext';  // import useCart
 import '../css/Cart.css';
 
-// Example cart data (you would typically get this from a global state or context)
-const cartItems = [
-  {
-    id: 1,
-    title: 'Book Title One',
-    author: 'Author Name',
-    price: 9.99,
-    imageSrc: '../images/fiverings.jpg'
-  },
-  {
-    id: 2,
-    title: 'Book Title Two',
-    author: 'Author Name',
-    price: 12.99,
-    imageSrc: '../images/fiverings.jpg'
-  },
-  // Add more items as needed
-];
-
 const Cart = () => {
+  const { cartItems } = useCart();  // get cartItems from context
   const navigate = useNavigate();
 
   const handleCheckout = () => {
-    navigate('/checkout');
+    navigate('/checkout', { state: { cartItems } });
   };
+
+  // Calculate total price
+  const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
 
   return (
     <div className="add-to-cart">
       <h1>Shopping Cart</h1>
       <div className="cart-items">
         {cartItems.length === 0 ? (
-          <p>Your cart is empty.</p>
+          <p className='empty'>Your cart is empty.</p>
         ) : (
           cartItems.map(item => (
             <div key={item.id} className="cart-item">
@@ -48,7 +34,14 @@ const Cart = () => {
         )}
       </div>
       {cartItems.length > 0 && (
-        <button className="checkout-button" onClick={handleCheckout}>Proceed to Checkout</button>
+        <>
+          <div className="cart-total">
+            <h2>Total Price: ${totalPrice.toFixed(2)}</h2>
+          </div>
+          <button className="checkout-button" onClick={handleCheckout}>
+            Proceed to Checkout
+          </button>
+        </>
       )}
     </div>
   );

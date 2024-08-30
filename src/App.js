@@ -21,10 +21,9 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/Ebookstore" element={<Login />} />
           <Route path="/home" element={
             <MainLayout>
-              
               <ImageRotator />
               <ThreeDBook />
               <NewBook />
@@ -33,12 +32,18 @@ function App() {
           } />
           <Route path="/books" element={
             <MainLayout>
-              <Collections />
+              <Catalog />
             </MainLayout>
           } />
           <Route path="/cart" element={
             <MainLayout>
               <Cart />
+            </MainLayout>
+          } />
+
+          <Route path="/checkout" element={
+            <MainLayout>
+              <Checkout />
             </MainLayout>
           } />
         </Routes>

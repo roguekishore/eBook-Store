@@ -1,22 +1,26 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import { useCart } from '../CartContext';  // import useCart
 import '../css/Checkout.css';
 
 const Checkout = () => {
   const { state } = useLocation();
-  const book = state?.book;
+  const { cartItems, clearCart } = useCart();  // get cartItems and clearCart from context
+
+  const books = state?.cartItems || (state?.book ? [state.book] : cartItems);  // Determine what to display
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic
-    alert('Form submitted!');
+    alert('Order submitted!');
+    clearCart();  // Clear the cart after checkout
   };
 
   return (
     <div className="checkout">
       <h1>Checkout</h1>
-      {book && (
-        <div className="checkout-details">
+      {books.map((book, index) => (
+        <div key={index} className="checkout-details">
           <img src={book.imageSrc} alt={book.title} className="book-image" />
           <div className="book-info">
             <h2>{book.title}</h2>
@@ -25,7 +29,7 @@ const Checkout = () => {
             <p>Price: ${book.price.toFixed(2)}</p>
           </div>
         </div>
-      )}
+      ))}
       <div className="customer-form">
         <h2>Customer Information</h2>
         <form onSubmit={handleSubmit}>
@@ -35,9 +39,6 @@ const Checkout = () => {
           <label htmlFor="email">Email:</label>
           <input type="email" id="email" name="email" required />
 
-          <label htmlFor="address">Address:</label>
-          <input type="text" id="address" name="address" required />
-
           <label htmlFor="payment">Payment Method:</label>
           <select id="payment" name="payment" required>
             <option value="credit">Credit Card</option>
@@ -46,10 +47,9 @@ const Checkout = () => {
 
           <button type="submit">Submit Order</button>
         </form>
-        </div>
-        </div>
-        )
-    }
+      </div>
+    </div>
+  );
+};
 
 export default Checkout;
-     

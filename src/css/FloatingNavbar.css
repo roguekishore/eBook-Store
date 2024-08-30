@@ -14,7 +14,7 @@
     display: flex;
     gap: 9.5px; /* Reduced from 20px */
     padding: 9.5px 9.5px; /* Reduced from 10px 20px */
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.9);
     border-radius: 19px; /* Reduced from 20px */
     backdrop-filter: blur(10px);
     border-top: 0.95px #2b2828 solid; /* Reduced from 1px */
@@ -23,7 +23,7 @@
 
 .nav-button {
     position: relative;
-    background-color: #060606;
+    background-color: rgba(0, 0, 0, 0.3);
     border-top: 0.95px #494343 solid; /* Reduced from 1px */
     border-bottom: 0.95px #494343 solid; /* Reduced from 1px */
     border-left: none;
@@ -59,6 +59,7 @@
     left: 50%;
     transform: translateX(-50%);
     font-family: 'ibm';
+    font-weight: 400;
     color: #fff;
     background-color: #060606;
     border-top: 0.95px #2b2828 solid; /* Reduced from 1px */
@@ -73,5 +74,5 @@
 
 .nav-button:hover .nav-label {
     opacity: 1;
-    transform: translateX(-50%) translateY(-57px); /* Adjusted from -60px */
+    transform: translateX(-50%) translateY(-45px); /* Adjusted from -60px */
 }

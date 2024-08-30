@@ -1,26 +1,86 @@
+.Catalog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Centers vertically */
+    align-items: center;      /* Centers horizontally */
+    min-height: 100vh;        /* Ensures the container takes full viewport height */
+    text-align: center;
+    padding: 20px; 
+    background: linear-gradient(90deg, #ffffff, #e3e3e3);           /* Adjust padding if needed */
+}
+.search-box {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #000000; /* Light gray background */
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px; /* Padding around the input */
+    width: 350px; /* Width of the search box */
+    transition: background-color 0.3s ease;
+}
+
+.Catalog h1 {
+    font-family: 'monument';
+}
+
+.search-icon {
+    color: #ffffff; /* Gray color for the icon */
+    margin-right: 10px; /* Space between the icon and input */
+    font-size: 1.2em; /* Slightly larger icon */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+
+}
+
+.search-input {
+    border: none; /* Remove border */
+    outline: none; /* Remove default outline */
+    background: none; /* Transparent background */
+    width: 100%; /* Full width to fill the container */
+    font-size: 16px; /* Font size for the input text */
+    color: #ffffff; /* Darker color for input text */
+    font-weight: 100;
+    font-family: 'ibm';
+}
+
+
+.search-box:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); /* Enhanced shadow */
+    background-color: #e0e0e0;
+    
+}
+
+.search-box:hover .search-input {
+    color: #000000; /* Change text color on hover */
+}
+
+
+.search-box:hover .search-icon {
+    color: #ff2600; /* Change icon color on hover */
+}
+
 .catalog {
     display: flex;
     flex-wrap: wrap;
-    gap: 75px;
+    gap: 100px;
     justify-content: center;
     text-align: center;
-    padding: 100px;
+    padding: 40px 100px;
 }
 
 /* Book card styles */
 .catalog-books {
-    background-color: #fff;
+    background-color: #000000;
     /* border: 1px solid #ddd; */
     border-radius: 8px;
     overflow: hidden;
     width: 350px;
-
 }
 
 .catalog-image {
     width: 100%;
     overflow: hidden;
     height: auto;
+    max-height: 500px;
 }
 
 /* Book cover styles */
@@ -32,7 +92,7 @@
 
 /* Book info styles */
 .catalog-book-info {
-    padding: 15px;
+    padding: 25px;
 }
 
 .catalog-book-image:hover {
@@ -43,38 +103,50 @@
 .catalog-book-title {
     font-size: 1.5em;
     margin-bottom: 10px;
+    font-family: 'monument';
+    font-weight: 200;
+    color: #fff;
 }
 
 .catalog-book-author {
-    color: #555;
+    color: #c8c8c8;
     margin-bottom: 10px;
+    font-weight: 100;
 }
 
-.book-description {
+.book-category {
     font-size: 0.9em;
     line-height: 1.4;
     margin-bottom: 10px;
+    color: #c8c8c8;
 }
 
 .book-price {
     font-size: 1.2em;
     font-weight: bold;
-    color: #0084ff;
+    color: #ff2600;
     margin-bottom: 15px;
 }
 
-.buy-button {
-    background-color: #0084ff;
+.buy-button, .add-to-cart-button {
+    background-color: #ff2600;
     color: #fff;
     border: none;
-    border-radius: 5px;
-    padding: 10px 25px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
 }
+
+
 
 .buy-button:hover {
-    background-color: #005bb5;
+    background-color: #fff;
+    color: #ff2600;
 }
 
+.add-to-cart-button:hover {
+    background-color: #fff;
+    color: #ff2600;
+}

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../CartContext';
-import '../css/NavBar.css';
+import '../css/DupNavBar.css';
 
-const NavBar = () => {  
+const DupNavBar = () => {  
     const { cartItems } = useCart(); 
     const [time, setTime] = useState('');
 
@@ -34,4 +34,4 @@ const NavBar = () => {
     );
 };
 
-export default NavBar;
+export default DupNavBar;

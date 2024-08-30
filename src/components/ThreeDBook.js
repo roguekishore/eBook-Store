@@ -3,6 +3,9 @@ import '../css/ThreeDBook.css';
 import batman from '../images/batman.jpg';
 import batmantitle from '../images/batmantitle1.png';
 import batmanchar from '../images/batmanchar.png';
+import starwars from '../images/darthvader.jpg'
+import starwarstitle from '../images/darthvadertitle.png'
+import starwarschar from '../images/darthvaderchar.png'
 
 const ThreeDBook = () => {
   return (

@@ -1,93 +1,105 @@
 .checkout {
-  padding: 20px;
-  max-width: 900px;
-  margin: 0 auto;
-  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Centers vertically */
+  align-items: center;      /* Centers horizontally */
+  min-height: 100vh;        /* Ensures the container takes full viewport height */
+  text-align: center;
+  padding: 20px; 
+  background: linear-gradient(90deg, #ffffff, #e3e3e3); /* Background gradient */
 }
 
 .checkout h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 2em;
+  font-family: 'monument';
+  color: #000; /* Dark color for the heading */
 }
 
 .checkout-details {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+  background-color: #000000;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 80%; /* Adjust width as needed */
+  max-width: 600px; /* Limit width for larger screens */
+  color: #ffffff; /* Text color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 .book-image {
-  max-width: 200px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100px;
+  height: auto;
+  border-radius: 4px;
+  margin-right: 20px;
 }
 
 .book-info {
-  text-align: center;
-  margin-top: 15px;
+  text-align: left;
 }
 
 .book-info h2 {
-  font-size: 1.5em;
-  margin: 10px 0;
+  font-family: 'monument';
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #ffffff; /* Book title color */
 }
 
 .book-info p {
-  font-size: 1em;
+  color: #c8c8c8; /* Book info color */
   margin: 5px 0;
 }
 
 .customer-form {
+  background-color: #000000;
+  border-radius: 8px;
+  padding: 20px;
   margin-top: 20px;
+  width: 80%;
+  max-width: 600px;
+  color: #ffffff; /* Form text color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 .customer-form h2 {
+  font-family: 'monument';
   font-size: 1.5em;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.customer-form form {
-  display: flex;
-  flex-direction: column;
-  max-width: 600px;
-  margin: 0 auto;
+  margin-bottom: 20px;
+  color: #ffffff; /* Heading color */
 }
 
 .customer-form label {
-  margin-bottom: 5px;
-  font-weight: bold;
+  display: block;
+  font-size: 1em;
+  margin: 10px 0;
+  color: #c8c8c8; /* Label color */
 }
 
 .customer-form input,
 .customer-form select {
+  font-family: 'ibm';
+  width: calc(100% - 20px); /* Full width with padding */
   padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1em;
+  border: 1px solid #333;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #ffffff; /* Input background */
+  color: #000000; /* Input text color */
 }
 
 .customer-form button {
-  padding: 10px;
-  background-color: #333;
-  color: white;
+  font-family: 'ibm';
+  background-color: #ff2600;
+  color: #ffffff;
   border: none;
-  border-radius: 5px;
-  font-size: 1.2em;
+  padding: 10px 20px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
 }
 
 .customer-form button:hover {
-  background-color: #555;
-  transform: scale(1.05);
+  background-color: #ffffff;
+  color: #ff2600;
 }
-
-.customer-form button:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
-}
-

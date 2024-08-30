@@ -37,12 +37,10 @@ const Collections = () => {
   };
 
   const handleBuyNow = (book) => {
-    // Navigate to checkout page with book details
     navigate('/checkout', { state: { book } });
   };
 
   const handleAddToCart = (book) => {
-    // Add book to cart logic (can be implemented later)
     console.log(`${book.title} added to cart.`);
   };
 
