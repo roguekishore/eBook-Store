@@ -6,20 +6,20 @@ import '../css/Login.css';
 
 const Login = () => {
   const [isRegisterActive, setIsRegisterActive] = useState(false);
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate(); 
 
   const toggleForm = () => {
     setIsRegisterActive(!isRegisterActive);
   };
 
   const handleSignIn = () => {
-    // Add sign-in logic here if needed
-    navigate('/home'); // Redirect to home
+    
+    navigate('/home'); 
   };
 
   const handleSignUp = () => {
-    // Add sign-up logic here if needed
-    navigate('/home'); // Redirect to home
+    
+    navigate('/home'); 
   };
 
   return (

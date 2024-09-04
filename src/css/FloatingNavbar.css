@@ -12,26 +12,26 @@
 /* Navbar container */
 .navbar-container {
     display: flex;
-    gap: 9.5px; /* Reduced from 20px */
-    padding: 9.5px 9.5px; /* Reduced from 10px 20px */
+    gap: 9.5px; /* Adjusted for consistency */
+    padding: 9.5px; /* Reduced padding */
     background-color: rgba(0, 0, 0, 0.9);
-    border-radius: 19px; /* Reduced from 20px */
+    border-radius: 19px; /* Reduced radius */
     backdrop-filter: blur(10px);
-    border-top: 0.95px #2b2828 solid; /* Reduced from 1px */
-    border-bottom: 0.95px #2b2828 solid; /* Reduced from 1px */
+    border-top: 0.95px #2b2828 solid; /* Reduced border */
+    border-bottom: 0.95px #2b2828 solid; /* Reduced border */
 }
 
 .nav-button {
     position: relative;
     background-color: rgba(0, 0, 0, 0.3);
-    border-top: 0.95px #494343 solid; /* Reduced from 1px */
-    border-bottom: 0.95px #494343 solid; /* Reduced from 1px */
+    border-top: 0.95px #494343 solid; /* Reduced border */
+    border-bottom: 0.95px #494343 solid; /* Reduced border */
     border-left: none;
     border-right: none;
-    border-radius: 9.5px; /* Reduced from 10px */
-    padding: 9.5px; /* Reduced from 10px */
-    width: 38px; /* Reduced from 40px */
-    height: 38px; /* Reduced from 40px */
+    border-radius: 9.5px; /* Reduced radius */
+    padding: 9.5px; /* Reduced padding */
+    width: 38px; /* Reduced size */
+    height: 38px; /* Reduced size */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,12 +41,11 @@
 
 .nav-button:hover {
     background-color: #171717;
-    /* transform: scale(1.05); */
 }
 
 .icon {
-    width: 19px; /* Reduced from 20px */
-    height: 19px; /* Reduced from 20px */
+    width: 19px; /* Reduced size */
+    height: 19px; /* Reduced size */
     transition: fill 0.3s;
 }
 
@@ -62,11 +61,11 @@
     font-weight: 400;
     color: #fff;
     background-color: #060606;
-    border-top: 0.95px #2b2828 solid; /* Reduced from 1px */
-    border-bottom: 0.95px #2b2828 solid; /* Reduced from 1px */
-    padding: 4.75px 9.5px; /* Reduced from 5px 10px */
-    border-radius: 4.75px; /* Reduced from 5px */
-    font-size: 11.4px; /* Reduced from 12px */
+    border-top: 0.95px #2b2828 solid; /* Reduced border */
+    border-bottom: 0.95px #2b2828 solid; /* Reduced border */
+    padding: 4.75px 9.5px; /* Reduced padding */
+    border-radius: 4.75px; /* Reduced radius */
+    font-size: 11.4px; /* Reduced size */
     opacity: 0;
     transition: opacity 0.3s, transform 0.3s;
     white-space: nowrap;
@@ -74,5 +73,88 @@
 
 .nav-button:hover .nav-label {
     opacity: 1;
-    transform: translateX(-50%) translateY(-45px); /* Adjusted from -60px */
+    transform: translateX(-50%) translateY(-45px); /* Adjusted position */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and laptops */
+@media (max-width: 1024px) {
+    .navbar-container {
+        gap: 8px; /* Slightly smaller gap */
+        padding: 8px; /* Reduced padding */
+        border-radius: 15px; /* Smaller radius */
+    }
+
+    .nav-button {
+        padding: 8px; /* Reduced padding */
+        width: 35px; /* Slightly smaller width */
+        height: 35px; /* Slightly smaller height */
+    }
+
+    .icon {
+        width: 18px; /* Slightly smaller icon size */
+        height: 18px; /* Slightly smaller icon size */
+    }
+
+    .nav-label {
+        font-size: 10px; /* Smaller font size */
+        padding: 4px 8px; /* Reduced padding */
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .navbar {
+        bottom: 10px; /* Move navbar closer to the bottom */
+    }
+
+    .navbar-container {
+        gap: 5px; /* Smaller gap */
+        padding: 6px; /* Reduced padding */
+        border-radius: 12px; /* Smaller radius */
+    }
+
+    .nav-button {
+        padding: 6px; /* Reduced padding */
+        width: 32px; /* Smaller button width */
+        height: 32px; /* Smaller button height */
+    }
+
+    .icon {
+        width: 16px; /* Smaller icon size */
+        height: 16px; /* Smaller icon size */
+    }
+
+    .nav-label {
+        font-size: 9px; /* Smaller font size */
+        padding: 3px 6px; /* Smaller padding */
+        transform: translateX(-50%) translateY(-40px); /* Adjust label position */
+    }
+}
+
+/* For small mobile screens (like very small phones) */
+@media (max-width: 480px) {
+    .navbar-container {
+        gap: 4px; /* Even smaller gap */
+        padding: 4px; /* Even smaller padding */
+        border-radius: 10px; /* Even smaller radius */
+    }
+
+    .nav-button {
+        padding: 5px; /* Smaller padding */
+        width: 28px; /* Smaller button width */
+        height: 28px; /* Smaller button height */
+    }
+
+    .icon {
+        width: 14px; /* Even smaller icon size */
+        height: 14px; /* Even smaller icon size */
+    }
+
+    .nav-label {
+        font-size: 8px; /* Even smaller font size */
+        padding: 2px 4px; /* Even smaller padding */
+        transform: translateX(-50%) translateY(-35px); /* Adjust label position */
+    }
 }

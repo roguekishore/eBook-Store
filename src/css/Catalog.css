@@ -1,22 +1,25 @@
 .Catalog {
     display: flex;
     flex-direction: column;
-    justify-content: center;  /* Centers vertically */
-    align-items: center;      /* Centers horizontally */
-    min-height: 100vh;        /* Ensures the container takes full viewport height */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     text-align: center;
-    padding: 20px; 
-    background: linear-gradient(90deg, #ffffff, #e3e3e3);           /* Adjust padding if needed */
+    padding: 20px;
+    background: linear-gradient(90deg, #ffffff, #e3e3e3);
 }
+
 .search-box {
     display: flex;
     justify-content: center;
-    text-align: center;
-    background-color: #000000; /* Light gray background */
-    border-radius: 20px; /* Rounded corners */
-    padding: 10px; /* Padding around the input */
-    width: 350px; /* Width of the search box */
+    align-items: center;
+    background-color: #000000;
+    border-radius: 20px;
+    padding: 10px;
+    width: 80%; /* Use percentage for responsiveness */
+    max-width: 350px; /* Limit the max width */
     transition: background-color 0.3s ease;
+    margin-bottom: 20px;
 }
 
 .Catalog h1 {
@@ -24,56 +27,53 @@
 }
 
 .search-icon {
-    color: #ffffff; /* Gray color for the icon */
-    margin-right: 10px; /* Space between the icon and input */
-    font-size: 1.2em; /* Slightly larger icon */
+    color: #ffffff;
+    margin-right: 10px;
+    font-size: 1.2em;
     transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
-
 }
 
 .search-input {
-    border: none; /* Remove border */
-    outline: none; /* Remove default outline */
-    background: none; /* Transparent background */
-    width: 100%; /* Full width to fill the container */
-    font-size: 16px; /* Font size for the input text */
-    color: #ffffff; /* Darker color for input text */
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    font-size: 16px;
+    color: #ffffff;
     font-weight: 100;
     font-family: 'ibm';
 }
 
-
 .search-box:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); /* Enhanced shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
     background-color: #e0e0e0;
-    
 }
 
 .search-box:hover .search-input {
-    color: #000000; /* Change text color on hover */
+    color: #000000;
 }
 
-
 .search-box:hover .search-icon {
-    color: #ff2600; /* Change icon color on hover */
+    color: #ff2600;
 }
 
 .catalog {
     display: flex;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 50px;
     justify-content: center;
     text-align: center;
-    padding: 40px 100px;
+    padding: 20px; /* Reduced padding for smaller screens */
 }
 
 /* Book card styles */
 .catalog-books {
     background-color: #000000;
-    /* border: 1px solid #ddd; */
     border-radius: 8px;
     overflow: hidden;
-    width: 350px;
+    width: 100%;
+    max-width: 350px; /* Set max-width for cards */
+    margin-bottom: 20px; /* Add margin to separate on smaller screens */
 }
 
 .catalog-image {
@@ -87,21 +87,21 @@
 .catalog-book-image {
     width: 100%;
     height: auto;
+    min-height: 500px;
     transition: transform 0.3s ease;
 }
 
 /* Book info styles */
 .catalog-book-info {
-    padding: 25px;
+    padding: 15px; /* Adjusted padding for smaller screens */
 }
 
 .catalog-book-image:hover {
     transform: scale(1.1);
-    
-  }
+}
 
 .catalog-book-title {
-    font-size: 1.5em;
+    font-size: 1.3em; /* Adjust font size */
     margin-bottom: 10px;
     font-family: 'monument';
     font-weight: 200;
@@ -122,7 +122,7 @@
 }
 
 .book-price {
-    font-size: 1.2em;
+    font-size: 1.1em; /* Adjust font size */
     font-weight: bold;
     color: #ff2600;
     margin-bottom: 15px;
@@ -132,14 +132,12 @@
     background-color: #ff2600;
     color: #fff;
     border: none;
-  padding: 10px 15px;
-  margin: 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease; 
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-
-
 
 .buy-button:hover {
     background-color: #fff;
@@ -149,4 +147,37 @@
 .add-to-cart-button:hover {
     background-color: #fff;
     color: #ff2600;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .catalog {
+        gap: 30px; /* Reduce gap between items */
+        padding: 20px; /* Less padding on laptops */
+    }
+}
+
+@media (max-width: 768px) {
+    .catalog {
+        flex-direction: column; /* Stack items on top of each other */
+        align-items: center; /* Center align items */
+    }
+    .catalog-books {
+        width: 90%; /* Adjust card width */
+    }
+    .Catalog {
+        padding: 10px; /* Reduce padding on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .catalog-book-title {
+        font-size: 1.1em; /* Smaller font size for mobile */
+    }
+    .catalog-book-info {
+        padding: 10px; /* Less padding on mobile */
+    }
+    .buy-button, .add-to-cart-button {
+        padding: 8px 12px; /* Smaller buttons on mobile */
+    }
 }

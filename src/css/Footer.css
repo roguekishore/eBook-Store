@@ -1,11 +1,8 @@
-/* Footer.css */
-
 .footer {
     background-color: #000000;
     padding: 40px 20px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    /* margin: 40px auto 0; */
     max-width: 100%;
     position: relative;
 }
@@ -30,6 +27,8 @@
     display: flex;
     gap: 20px;
     margin-top: 10px;
+    flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
+    justify-content: center;
 }
 
 .footer-icon {
@@ -79,4 +78,99 @@
 
 .footer-bottom p {
     margin: 5px 0;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+    .footer-container {
+        padding: 20px;
+        gap: 15px; /* Reduce gap between sections */
+    }
+
+    .footer-top h2 {
+        font-size: 22px; /* Slightly smaller font */
+    }
+
+    .footer-icons {
+        gap: 15px; /* Reduce gap between icons */
+    }
+
+    .footer-links {
+        gap: 30px; /* Reduce gap between links */
+    }
+
+    .footer-links a {
+        font-size: 14px; /* Smaller link font size */
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .footer-container {
+        gap: 10px; /* Reduce gap between sections */
+    }
+
+    .footer-top h2 {
+        font-size: 20px; /* Smaller font for headings */
+    }
+
+    .footer-icons {
+        gap: 10px; /* Further reduce gap between icons */
+        margin-top: 5px;
+    }
+
+    .footer-icon {
+        width: 40px; /* Smaller icons */
+        height: 40px;
+        font-size: 18px; /* Smaller icon font size */
+    }
+
+    .footer-links {
+        gap: 20px; /* Reduce gap between links */
+        margin: 15px 0;
+    }
+
+    .footer-links a {
+        font-size: 13px; /* Further reduce font size */
+    }
+
+    .footer-bottom {
+        font-size: 12px; /* Smaller text size */
+    }
+}
+
+/* Small mobile screens (very small phones) */
+@media (max-width: 480px) {
+    .footer-container {
+        gap: 5px; /* Minimal gap */
+    }
+
+    .footer-top h2 {
+        font-size: 18px; /* Smallest heading size */
+    }
+
+    .footer-icons {
+        gap: 8px; /* Minimal gap */
+    }
+
+    .footer-icon {
+        width: 35px; /* Even smaller icons */
+        height: 35px;
+        font-size: 16px; /* Small icon font size */
+    }
+
+    .footer-links {
+        gap: 15px; /* Minimal gap between links */
+        flex-direction: column; /* Stack links vertically */
+    }
+
+    .footer-links a {
+        font-size: 12px; /* Smallest link font size */
+    }
+
+    .footer-bottom {
+        font-size: 11px; /* Smallest text size */
+    }
 }

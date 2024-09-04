@@ -1,6 +1,6 @@
 .testimonial-section {
     background: linear-gradient(90deg, #fff, #fff);
-    padding: 50px 0px;
+    padding: 50px 20px; /* Added padding for mobile */
     text-align: center;
     color: #ffffff;
 }
@@ -12,18 +12,68 @@
     color: black;
 }
 
-.testimonial-container {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .testimonial-section h2 {
+        font-size: 2rem; /* Reduce font size */
+    }
+    .testimonial-container {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center;
+        gap: 30px;
+    }
 }
 
+@media screen and (max-width: 576px) {
+    .testimonial-section h2 {
+        font-size: 1.5rem; /* Further reduce font size */
+    }
+    .testimonial-card {
+        padding: 15px; /* Reduce padding */
+        max-width: 100%; /* Ensure card fits within container */
+    }
+    .testimonial-image {
+        width: 40px; /* Smaller image size */
+        height: 40px;
+    }
+    .testimonial-card p {
+        font-size: 0.9rem; /* Smaller font size */
+    }
+    .testimonial-card h3 {
+        font-size: 1rem; /* Smaller font size */
+    }
+}
 
+@media screen and (max-width: 400px) {
+    .testimonial-section h2 {
+        font-size: 1.2rem; /* Minimize font size for very small screens */
+    }
+    .testimonial-card {
+        padding: 10px; /* Further reduce padding */
+    }
+    .testimonial-image {
+        width: 30px; /* Even smaller image size */
+        height: 30px;
+    }
+    .testimonial-card p {
+        font-size: 0.8rem; /* Minimum font size */
+    }
+    .testimonial-card h3 {
+        font-size: 0.9rem; /* Minimum font size */
+    }
+}
+
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center;
+    gap: 50px;
+    margin: 0 auto;
+}
 
 .testimonial-card {
     background: rgb(255, 0, 0);
     border-radius: 16px;
-    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
     backdrop-filter: blur(3.2px);
     -webkit-backdrop-filter: blur(3.2px);
     padding: 20px;
@@ -34,7 +84,7 @@
 }
 
 .testimonial-card:hover {
-     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); 
 }
 
 .testimonial-image {
@@ -53,4 +103,3 @@
     font-size: 1.2rem;
     margin: 5px 0;
 }
-

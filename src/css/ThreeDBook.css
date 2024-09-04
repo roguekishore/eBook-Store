@@ -52,6 +52,11 @@ background: white;
   perspective: 2500px;
   margin: 0 70px;
   overflow: visible; 
+  z-index: 1;
+}
+
+.threecard:last-child {
+  z-index: 0;
 }
 
 .cover-image {
@@ -119,13 +124,40 @@ background: white;
   width: 100%;
   transition: transform 0.5s;
   position: absolute;
-  top: 50%;
+  top: 52%;
   z-index: 2;
+}
+
+.irontitle {
+  width: 100%;
+  transition: transform 0.5s;
+  position: absolute;
+  
+  z-index: 2;
+  padding: 20px;
+}
+
+.startitle {
+  width: 100%;
+  transition: transform 0.5s;
+  position: absolute;
+  top : 50%;
+  z-index: 2;
+  padding: 20px;
 }
 
 .threecard:hover .title {
   transform: translate3d(0%, -50px, 100px);
   
+}
+
+.threecard:hover .irontitle {
+  transform: translate3d(0%, -50px, 100px);
+  
+}
+
+.threecard:hover .startitle {
+  transform: translate3d(0%, -50px, 100px);
 }
 
 .character {
@@ -136,8 +168,22 @@ background: white;
   z-index: -1;
 }
 
+.darthcharacter {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+
 .threecard:hover .character {
   opacity: 1;
   transform: translate3d(0%, -30%, 100px);
+  z-index: 1; /* Ensure it appears above other content */
+}
+
+.threecard:hover .darthcharacter {
+  opacity: 1;
+  transform: translate3d(0%, -10%, 100px);
   z-index: 1; /* Ensure it appears above other content */
 }
