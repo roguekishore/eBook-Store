@@ -6,19 +6,19 @@ const testimonials = [
   {
     name: 'Sandra Bullock',
     role: 'Finance Advisor',
-    image: {bat}, // replace with actual image URL
+    image: {bat},
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.'
   },
   {
     name: 'John Smith',
     role: 'Account Professional',
-    image: {bat}, // replace with actual image URL
+    image: {bat}, 
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.'
   },
   {
     name: 'Maria Messy',
     role: 'Restaurant Owner',
-    image: {bat}, // replace with actual image URL
+    image: {bat},
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.'
   }
 ];

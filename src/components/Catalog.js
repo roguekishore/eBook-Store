@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
-import { useCart } from '../CartContext';  // import useCart
+import { useCart } from '../CartContext';
 import '../css/Catalog.css';
-
-// Import images
 import ric from '../images/books/Rich Dad Poor Dad.jpg';
 import int from '../images/books/The Intelligent Investor.jpg';
 import thi from '../images/books/Thinking Fast and Slow.jpg';
@@ -52,7 +50,7 @@ const books = [
 const Catalog = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const navigate = useNavigate();
-    const { addToCart } = useCart();  // Get addToCart function from context
+    const { addToCart } = useCart(); 
 
     const handleSearchChange = (e) => {
         setSearchTerm(e.target.value.toLowerCase());
@@ -63,7 +61,8 @@ const Catalog = () => {
     };
 
     const handleAddToCart = (book) => {
-        addToCart(book);  // Add the book to the cart
+        addToCart(book);
+        alert(`${book.title} has been added to your cart!`);
     };
 
     const filteredBooks = books.filter(book =>

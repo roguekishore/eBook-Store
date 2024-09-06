@@ -1,19 +1,18 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { useCart } from '../CartContext';  // import useCart
+import { useCart } from '../CartContext';  
 import '../css/Checkout.css';
 
 const Checkout = () => {
-  const { state } = useLocation();
-  const { cartItems, clearCart } = useCart();  // get cartItems and clearCart from context
+  const { state } = useLocation();  // This receives the book details from ImageRotator
+  const { cartItems, clearCart } = useCart();  
 
-  const books = state?.cartItems || (state?.book ? [state.book] : cartItems);  // Determine what to display
+  const books = state?.cartItems || (state?.book ? [state.book] : cartItems);  // Handle single book or cart items
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic
     alert('Order submitted!');
-    clearCart();  // Clear the cart after checkout
+    clearCart(); 
   };
 
   return (

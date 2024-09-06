@@ -41,6 +41,7 @@
 .book-info h2 {
   font-family: 'monument';
   font-size: 1.2em;
+  font-weight: 300;
   margin-bottom: 10px;
   color: #ffffff; /* Book title color */
 }
@@ -57,15 +58,16 @@
   margin-top: 20px;
   width: 80%;
   max-width: 600px;
-  color: #ffffff; /* Form text color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .customer-form h2 {
   font-family: 'monument';
   font-size: 1.5em;
+  font-weight: 300;
   margin-bottom: 20px;
-  color: #ffffff; /* Heading color */
+  color: #ffffff; 
 }
 
 .customer-form label {

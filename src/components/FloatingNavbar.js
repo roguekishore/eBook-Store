@@ -4,12 +4,10 @@ import { AiOutlineHome, AiOutlineShoppingCart } from 'react-icons/ai';
 import { FaBook } from 'react-icons/fa';
 import { MdTablet } from 'react-icons/md';
 import { FaShoppingBag } from 'react-icons/fa';
-
-
 import '../css/FloatingNavbar.css'
 
 function FloatingNavbar() {
-    const navigate = useNavigate(); // Use useNavigate hook to get navigate function
+    const navigate = useNavigate();
 
     return (
         <div>

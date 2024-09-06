@@ -27,7 +27,7 @@ const NavBar = () => {
             <div className="nav-links">
                 <Link to="/home">Home</Link>
                 <Link to="/books">Books</Link>
-                <Link to="/cart">Cart {cartItems && `(${cartItems.length})`}</Link>
+                <Link to="/cart">Cart {`(${cartItems.length})`}</Link>
                 <span className="time">{time}</span>
             </div>
         </nav>

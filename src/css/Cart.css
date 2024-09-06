@@ -82,7 +82,8 @@
   
   .cart-item-title {
     font-family: 'monument';
-    font-size: 1.5em;
+  
+    font-weight: 300;
     margin: 0;
   }
   
@@ -144,5 +145,26 @@
     font-size: 1.2em;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-actions {
+    display: flex;
+    gap: 10px; 
+  }
+  
+
+  .remove-button {
+    background-color: #ff2600;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .remove-button:hover {
+    background-color: #ffffff;
+    color: #ff2600;
   }
   

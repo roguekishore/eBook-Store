@@ -3,6 +3,7 @@ import '../css/ThreeDBook.css';
 import batman from '../images/batman.jpg';
 import batmantitle from '../images/batmantitle1.png';
 import batmanchar from '../images/batmanchar.png';
+
 import starwars from '../images/darthvader.jpg'
 import starwarstitle from '../images/str.png'
 import starwarschar from '../images/vaderor.png'
@@ -23,19 +24,19 @@ const ThreeDBook = () => {
     <div className="card-container">
         <div className="threecard">
           <div className="wrapper">
-            <img src={batman} alt="Cover" className="cover-image" />
+            <img src={starwars} alt="Cover" className="cover-image" />
           </div>
-          <img src={batmantitle} alt="Title" className="title" />
-          <img src={batmanchar} alt="Character" className="character" />
+          <img src={starwarstitle} alt="Title" className="startitle" />
+          <img src={starwarschar} alt="Character" className="darthcharacter" />
         </div>
 
 
         <div className="threecard">
           <div className="wrapper">
-            <img src={starwars} alt="Cover" className="cover-image" />
+            <img src={batman} alt="Cover" className="cover-image" />
           </div>
-          <img src={starwarstitle} alt="Title" className="startitle" />
-          <img src={starwarschar} alt="Character" className="darthcharacter" />
+          <img src={batmantitle} alt="Title" className="title" />
+          <img src={batmanchar} alt="Character" className="character" />
         </div>
 
 
