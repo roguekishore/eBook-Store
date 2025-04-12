@@ -1,0 +1,22 @@
+[
+    { "id": 1, "title": "Rich Dad Poor Dad", "author": "Robert Kiyosaki", "price": 19.99, "discount": 0.10, "category": "Finance" },
+    { "id": 2, "title": "The Intelligent Investor", "author": "Benjamin Graham", "price": 29.99, "discount": 0.15, "category": "Finance" },
+    { "id": 3, "title": "Thinking, Fast and Slow", "author": "Daniel Kahneman", "price": 24.99, "discount": 0.05, "category": "Psychology" },
+    { "id": 4, "title": "Atomic Habits", "author": "James Clear", "price": 18.99, "discount": 0.20, "category": "Psychology" },
+    { "id": 5, "title": "Meditations", "author": "Marcus Aurelius", "price": 14.99, "discount": 0.25, "category": "Philosophy" },
+    { "id": 6, "title": "Beyond Good and Evil", "author": "Friedrich Nietzsche", "price": 16.99, "discount": 0.10, "category": "Philosophy" },
+    { "id": 7, "title": "Principles", "author": "Ray Dalio", "price": 35.99, "discount": 0.05, "category": "Finance" },
+    { "id": 8, "title": "The Subtle Art of Not Giving a F*ck", "author": "Mark Manson", "price": 22.99, "discount": 0.10, "category": "Psychology" },
+    { "id": 9, "title": "The Art of War", "author": "Sun Tzu", "price": 11.99, "discount": 0.15, "category": "Philosophy" },
+    { "id": 10, "title": "Grit", "author": "Angela Duckworth", "price": 20.99, "discount": 0.10, "category": "Psychology" },
+    { "id": 11, "title": "The Millionaire Next Door", "author": "Thomas J. Stanley", "price": 27.99, "discount": 0.20, "category": "Finance" },
+    { "id": 12, "title": "Start with Why", "author": "Simon Sinek", "price": 23.99, "discount": 0.10, "category": "Finance" },
+    { "id": 13, "title": "Man’s Search for Meaning", "author": "Viktor E. Frankl", "price": 19.99, "discount": 0.25, "category": "Psychology" },
+    { "id": 14, "title": "The 7 Habits of Highly Effective People", "author": "Stephen R. Covey", "price": 21.99, "discount": 0.15, "category": "Psychology" },
+    { "id": 15, "title": "The Wealth of Nations", "author": "Adam Smith", "price": 33.99, "discount": 0.10, "category": "Finance" },
+    { "id": 16, "title": "The Art of Happiness", "author": "Dalai Lama", "price": 17.99, "discount": 0.20, "category": "Psychology" },
+    { "id": 17, "title": "The Nicomachean Ethics", "author": "Aristotle", "price": 12.99, "discount": 0.05, "category": "Philosophy" },
+    { "id": 18, "title": "A Man for All Seasons", "author": "Robert Bolt", "price": 13.99, "discount": 0.10, "category": "Philosophy" },
+    { "id": 19, "title": "The 4-Hour Workweek", "author": "Tim Ferriss", "price": 29.99, "discount": 0.15, "category": "Finance" },
+    { "id": 20, "title": "Daring Greatly", "author": "Brené Brown", "price": 22.99, "discount": 0.10, "category": "Psychology" }
+]
