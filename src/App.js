@@ -10,11 +10,13 @@ import Checkout from './pages/Checkout';
 import ThreeDBook from './components/ThreeDBook';
 import Footer from './components/Footer';
 import ImageRotator from './components/ImageRotator';
-import Login from './pages/Login';
+// import Login from './pages/Login';
 import Cart from './pages/Cart';
 import MainLayout from './components/MainLayout';
 import FloatingNavbar from './components/FloatingNavbar';
 import bg from './images/lib.jpeg';
+import Profile from './pages/Profile';
+import Login from './pages/Login1';
 
 function App() {
   return (
@@ -28,6 +30,7 @@ function App() {
               <ThreeDBook />
               <NewBook />
               <Testimonials />
+              
             </MainLayout>
           } />
           <Route path="/books" element={
@@ -40,7 +43,11 @@ function App() {
               <Cart />
             </MainLayout>
           } />
-
+          <Route path="/profile" element={
+            <MainLayout>
+              <Profile />
+            </MainLayout>
+          } />
           <Route path="/checkout" element={
             <MainLayout>
               <Checkout />

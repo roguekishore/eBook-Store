@@ -1,80 +1,169 @@
-import React, { useState } from 'react';
-import 'boxicons/css/boxicons.min.css';
-import { useNavigate } from 'react-router-dom'; 
+import React, { useState } from "react";
+import "../css/Login.css";
 
-import '../css/Login.css';
+export default function Login() {
+  const [type, setType] = useState("signIn");
+  const [signInState, setSignInState] = useState({
+    email: "",
+    password: "",
+  });
+  const [signUpState, setSignUpState] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
 
-const Login = () => {
-  const [isRegisterActive, setIsRegisterActive] = useState(false);
-  const navigate = useNavigate(); 
-
-  const toggleForm = () => {
-    setIsRegisterActive(!isRegisterActive);
+  const handleOnClick = (text) => {
+    if (text !== type) {
+      setType(text);
+      return;
+    }
   };
 
-  const handleSignIn = () => {  
-    navigate('/home'); 
+  const handleSignInChange = (evt) => {
+    const value = evt.target.value;
+    setSignInState({
+      ...signInState,
+      [evt.target.name]: value,
+    });
   };
 
-  const handleSignUp = () => {
-    
-    navigate('/home'); 
+  const handleSignUpChange = (evt) => {
+    const value = evt.target.value;
+    setSignUpState({
+      ...signUpState,
+      [evt.target.name]: value,
+    });
   };
+
+  const handleSignInSubmit = (evt) => {
+    evt.preventDefault();
+    const { email, password } = signInState;
+    alert(`You are login with email: ${email} and password: ${password}`);
+    setSignInState({ email: "", password: "" });
+  };
+
+  const handleSignUpSubmit = (evt) => {
+    evt.preventDefault();
+    const { name, email, password } = signUpState;
+    alert(
+      `You are sign up with name: ${name} email: ${email} and password: ${password}`
+    );
+    setSignUpState({ name: "", email: "", password: "" });
+  };
+
+  const containerClass =
+    "container " + (type === "signUp" ? "right-panel-active" : "");
 
   return (
-    <div className='login'>
-<div className={`container ${isRegisterActive ? 'active' : ''}`} id="container">
-<div className="form-container sign-up">
-          <form>
+    <div className="App">
+      <h2>Sign in/up Form</h2>
+      <div className={containerClass} id="container">
+        {/* SignUpForm */}
+        <div className="form-container sign-up-container">
+          <form onSubmit={handleSignUpSubmit}>
             <h1>Create Account</h1>
-            <div className="social-icons">
-              <a href="#" className="icons"><i className='bx bxl-google'></i></a>
-              <a href="#" className="icons"><i className='bx bxl-facebook'></i></a>
-              <a href="#" className="icons"><i className='bx bxl-github'></i></a>
-              <a href="#" className="icons"><i className='bx bxl-linkedin'></i></a>
+            <div className="social-container">
+              <a href="#" className="social">
+                <i className="fab fa-facebook-f" />
+              </a>
+              <a href="#" className="social">
+                <i className="fab fa-google-plus-g" />
+              </a>
+              <a href="#" className="social">
+                <i className="fab fa-linkedin-in" />
+              </a>
             </div>
-            <span>Register with E-mail</span>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Enter E-mail" />
-            <input type="password" placeholder="Enter Password" />
-            <button type="button" onClick={handleSignUp}>Sign Up</button> 
+            <span>or use your email for registration</span>
+            <input
+              type="text"
+              name="name"
+              value={signUpState.name}
+              onChange={handleSignUpChange}
+              placeholder="Name"
+            />
+            <input
+              type="email"
+              name="email"
+              value={signUpState.email}
+              onChange={handleSignUpChange}
+              placeholder="Email"
+            />
+            <input
+              type="password"
+              name="password"
+              value={signUpState.password}
+              onChange={handleSignUpChange}
+              placeholder="Password"
+            />
+            <button>Sign Up</button>
           </form>
         </div>
 
-        <div className="form-container sign-in">
-          <form>
-            <h1>Sign In</h1>
-            <div className="social-icons">
-              <a href="#" className="icons"><i className='bx bxl-google'></i></a>
-              <a href="#" className="icons"><i className='bx bxl-facebook'></i></a>
-              <a href="#" className="icons"><i className='bx bxl-github'></i></a>
-              <a href="#" className="icons"><i className='bx bxl-linkedin'></i></a>
+        {/* SignInForm */}
+        <div className="form-container sign-in-container">
+          <form onSubmit={handleSignInSubmit}>
+            <h1>Sign in</h1>
+            <div className="social-container">
+              <a href="#" className="social">
+                <i className="fab fa-facebook-f" />
+              </a>
+              <a href="#" className="social">
+                <i className="fab fa-google-plus-g" />
+              </a>
+              <a href="#" className="social">
+                <i className="fab fa-linkedin-in" />
+              </a>
             </div>
-            <span>Login With Email & Password</span>
-            <input type="email" placeholder="Enter E-mail" />
-            <input type="password" placeholder="Enter Password" />
-            <a href="#">Forget Password?</a>
-            <button type="button" onClick={handleSignIn}>Sign In</button> {/* Updated */}
+            <span>or use your account</span>
+            <input
+              type="email"
+              placeholder="Email"
+              name="email"
+              value={signInState.email}
+              onChange={handleSignInChange}
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={signInState.password}
+              onChange={handleSignInChange}
+            />
+            <a href="#">Forgot your password?</a>
+            <button>Sign In</button>
           </form>
         </div>
 
-        <div className="toggle-container">
-          <div className="toggle">
-            <div className="toggle-panel toggle-left">
-              <h1>Welcome To <br />Readify</h1>
-              <p>Sign in With ID & Password</p>
-              <button className="hidden" onClick={toggleForm} id="login">Sign In</button>
+        <div className="overlay-container">
+          <div className="overlay">
+            <div className="overlay-panel overlay-left">
+              <h1>Welcome Back!</h1>
+              <p>
+                To keep connected with us please login with your personal info
+              </p>
+              <button
+                className="ghost"
+                id="signIn"
+                onClick={() => handleOnClick("signIn")}
+              >
+                Sign In
+              </button>
             </div>
-            <div className="toggle-panel toggle-right">
-              <h1>Hi Readers!</h1>
-              <p>Join Readify and experience seamless reading.</p>
-              <button className="hidden" onClick={toggleForm} id="register">Sign Up</button>
+            <div className="overlay-panel overlay-right">
+              <h1>Hello, Friend!</h1>
+              <p>Enter your personal details and start journey with us</p>
+              <button
+                className="ghost "
+                id="signUp"
+                onClick={() => handleOnClick("signUp")}
+              >
+                Sign Up
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default Login;
+}

@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "id": "97c9",
+      "email": "kasdj@gmail.com",
+      "password": "M@adhan24"
+    },
+    {
+      "id": "c6a6",
+      "email": "727823tucs139@gmail.com",
+      "password": "M@dhan12"
+    },
+    {
+      "id": "e187",
+      "email": "deepika@gmail.com",
+      "password": "Wrong@123"
+    },
+    {
+      "id": "320b",
+      "name": "kishore",
+      "email": "kishore@gmail.com",
+      "password": "K!shore25"
+    },
+    {
+      "id": "e803",
+      "name": "madhan",
+      "email": "madhan@gmail.com",
+      "password": "M@dhan24"
+    },
+    {
+      "id": "4955",
+      "name": "abc",
+      "email": "abc@gmail.com",
+      "password": "Arnold@05"
+    },
+    {
+      "id": "e6d0",
+      "name": "manmadhan",
+      "email": "manmadhan@gmail.com",
+      "password": "123456man@A"
+    },
+    {
+      "id": "cb08",
+      "name": "+-",
+      "email": "727823tucs138@gmail.com",
+      "password": "M@dhan24"
+    }
+  ]
+}

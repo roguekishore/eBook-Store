@@ -1,0 +1,105 @@
+.Profile {
+    
+    display: flex;
+    flex-direction: column; /* Change to column to stack boxes vertically */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #ffffff, #e3e3e3);
+}
+
+.Profile h1 {
+    font-family: 'monument'; /* Ensure the font applies */
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.Profile form {
+    display: flex;
+    flex-direction: column;
+    width: 80%; /* Use percentage for responsiveness */
+    max-width: 400px; /* Limit the max width */
+}
+
+.Profile input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'ibm'; /* Apply the same font inside the input fields */
+}
+
+.Profile input:focus {
+    border-color: #ff2600;
+    outline: none;
+}
+
+.Profile .error-message {
+    color: #ff2600;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.Profile button {
+    background-color: #ff2600;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Profile button:hover {
+    background-color: #fff;
+    color: #ff2600;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .Profile {
+        padding: 10px; /* Reduce padding on mobile */
+    }
+
+    .Profile form {
+        width: 90%; /* Adjust form width on mobile */
+    }
+}
+
+.password-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .password-field input {
+    flex: 1;
+    padding-right: 30px; /* Space for the eye icon */
+  }
+  
+  .password-field span {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #ff2600; /* Eye icon color */
+  }
+  .password-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .password-field input {
+    flex: 1;
+    padding-right: 30px; /* Space for the eye icon */
+  }
+  
+  .password-field span {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #ff2600; /* Eye icon color */
+  }
