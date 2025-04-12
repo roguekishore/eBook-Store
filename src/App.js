@@ -21,7 +21,7 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/Ebookstore" element={<Login />} />
+          <Route path="/eBook-Store" element={<Login />} />
           <Route path="/home" element={
             <MainLayout>
               <ImageRotator />
