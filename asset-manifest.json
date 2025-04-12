@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Ebookstore/static/css/main.c390e19a.css",
-    "main.js": "/Ebookstore/static/js/main.1712944c.js",
+    "main.css": "/Ebookstore/static/css/main.8a5e1dc9.css",
+    "main.js": "/Ebookstore/static/js/main.590c708b.js",
     "static/media/batmantitle1.png": "/Ebookstore/static/media/batmantitle1.29102581c28b7a870cd2.png",
     "static/media/boxicons.svg": "/Ebookstore/static/media/boxicons.9e2b21b135bc7d4c803f.svg",
     "static/media/batmanchar.png": "/Ebookstore/static/media/batmanchar.47643e24e98c46102e8f.png",
@@ -41,11 +41,11 @@
     "static/media/Thinking Fast and Slow.jpg": "/Ebookstore/static/media/Thinking Fast and Slow.5c120efb103294d63586.jpg",
     "static/media/Sun Tzu -The art of War.jpg": "/Ebookstore/static/media/Sun Tzu -The art of War.8ec61a504b58065d7b44.jpg",
     "index.html": "/Ebookstore/index.html",
-    "main.c390e19a.css.map": "/Ebookstore/static/css/main.c390e19a.css.map",
-    "main.1712944c.js.map": "/Ebookstore/static/js/main.1712944c.js.map"
+    "main.8a5e1dc9.css.map": "/Ebookstore/static/css/main.8a5e1dc9.css.map",
+    "main.590c708b.js.map": "/Ebookstore/static/js/main.590c708b.js.map"
   },
   "entrypoints": [
-    "static/css/main.c390e19a.css",
-    "static/js/main.1712944c.js"
+    "static/css/main.8a5e1dc9.css",
+    "static/js/main.590c708b.js"
   ]
 }
