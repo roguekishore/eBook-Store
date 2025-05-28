@@ -4,20 +4,6 @@ This repository contains the frontend codebase for an online e-book store, devel
 
 **Note:** This repository focuses solely on the frontend implementation. Backend functionalities such as user authentication, database interactions are handled separately and are not included in this project.
 
-## Table of Contents
-
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Running the Application](#running-the-application)
-- [Advanced React Concepts Utilized](#advanced-react-concepts-utilized)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
-
 ## Features
 
 This e-book store frontend offers the following key features:
@@ -29,26 +15,16 @@ This e-book store frontend offers the following key features:
 
 ## Technologies Used
 
-This project utilizes the following key technologies:
+This project utilizes the React Router for declarative routing, Context API for efficient state management, Fetch API (implemented on local system) to make HTTP requests.
 
-- **React:** A JavaScript library for building user interfaces.
-- **React Router:** For declarative routing and navigation within the application.
-- **[State Management Library (Context API): If used, mention it here and briefly explain its role.]**
-- **[UI Library/Framework (e.g., Material UI, Tailwind CSS, Bootstrap): If used, mention it here and briefly explain its role in styling.]**
-- **[Styling Approach (e.g., CSS Modules, Styled Components, Plain CSS): Mention the approach used for styling.]**
-- **[HTTP Client Library (e.g., Axios, Fetch API): Mention the library used for making API requests (even though the backend isn't here, it's good to acknowledge).]**
-- **[Any other relevant libraries or tools used in the frontend development.]**
+![Screenshot 2025-05-28 181442](https://github.com/user-attachments/assets/4bb09b46-bd5b-4173-82ef-85f14269165f)
 
-## Getting Started
+![Screenshot 2025-05-28 181830](https://github.com/user-attachments/assets/ee7babb4-3350-4ba2-b2d7-17ef98076897)
 
-Follow these instructions to get a copy of the project up and running on your local machine.
+![Screenshot 2025-05-28 181522](https://github.com/user-attachments/assets/5df8d0a1-3d41-4503-846c-ee5613ba80e0)
 
-### Prerequisites
+![Screenshot 2025-05-28 181551](https://github.com/user-attachments/assets/9672d991-c419-47e0-a300-b23c2f4009e4)
 
-Ensure you have Node.js and npm (or yarn) installed on your system. You can download them from [https://nodejs.org/](https://nodejs.org/) and [https://www.npmjs.com/](https://www.npmjs.com/) respectively.
+![Screenshot 2025-05-28 181620](https://github.com/user-attachments/assets/f28f78c5-29a0-41ec-b34b-adaa93c50821)
 
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
+![Screenshot 2025-05-28 181640](https://github.com/user-attachments/assets/5d541882-a41e-4ac4-80cb-7bf0546b773a)
